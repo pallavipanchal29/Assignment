@@ -28,6 +28,11 @@ namespace Assignment.Controllers
             Task.Run(() => GetDataAsync().GetAwaiter().GetResult());
         }
 
+
+        /// <summary>
+        /// Gets campaigns ordered by order amount descending order
+        /// </summary>
+        /// <returns></returns>
         // GET api/<controller>/order
         [System.Web.Http.ActionName("order")]
         public ActionResult order()
@@ -37,6 +42,10 @@ namespace Assignment.Controllers
             return View("OrderedCampaigns");
         }
 
+        /// <summary>
+        /// Gets active campaigns
+        /// </summary>
+        /// <returns></returns>
         // GET api/<controller>/active
         [System.Web.Http.ActionName("active")]
         public ActionResult active()
@@ -47,6 +56,10 @@ namespace Assignment.Controllers
             return View("Campaigns");
         }
 
+        /// <summary>
+        /// Gets closed campaigns
+        /// </summary>
+        /// <returns></returns>
         // GET api/<controller>/active
         [System.Web.Http.ActionName("closed")]
         public ActionResult closed()
