@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Assignment.Models.Campaign>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div><b>Ordered Campaigns</b><br /></div>
+        <table class="table table-bordered table-responsive table-hover">
+            <tr>
+                <th>Title </th>
+                <th>Total Amount </th>
+                <th>Backers Count </th>
+                <th>End Date</th>
+            </tr>
+            @foreach (var d in ViewBag.Campaign)
+            {
+                <tr>
+                    <td>@d.Title</td>
+                    <td>@d.TotalAmount</td>
+                    <td>@d.BackersCount</td>
+                    <td>@d.EndDate</td>
+                </tr>
+            }
+        </table>
+
+    </div>
+</body>
+</html>

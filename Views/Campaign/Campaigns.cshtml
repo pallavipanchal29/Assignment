@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Assignment.Models.Campaign>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+        
+    <div  class="container"> 
+        <div><b>Campaigns</b><br /></div>
+        <table class="table table-bordered table-responsive table-hover">
+            <tr>
+                <th>Code </th>
+                <th>Title </th>
+                <th>Featured </th>
+                <th>Priority</th>
+                <th>Short Desc </th>
+                <th>Created </th>
+                <th>End Date</th>
+                <th>Total Amount </th>
+                <th>Procured Amount </th>
+                <th>Total Procured  </th>
+                <th>Backers Count </th>
+                <th>Category Id </th>
+                <th>Location </th>
+                <th>NGO Code </th>
+                <th>NGO Name </th>
+                <th>Days Left </th>
+                <th>Percentage </th>
+            </tr>
+            @foreach (var d in ViewBag.Campaign)
+            {
+        <tr>
+            <td>@d.Code</td>
+            <td>@d.Title</td>
+            <td>@d.Title</td>
+            <td>@d.Priority</td>
+            <td>@d.ShortDesc</td>
+            <td>@d.Created</td>
+            <td>@d.EndDate</td>
+            <td>@d.TotalAmount</td>
+            <td>@d.ProcuredAmount</td>
+            <td>@d.TotalProcured</td>
+            <td>@d.BackersCount</td>
+            <td>@d.CategoryId</td>
+            <td>@d.Location</td>
+            <td>@d.NgoCode</td>
+            <td>@d.NgoName</td>
+            <td>@d.DaysLeft</td>
+            <td>@d.Percentage</td>
+        </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
